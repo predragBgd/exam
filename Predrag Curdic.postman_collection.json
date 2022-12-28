@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "d6847f72-12b3-41a5-a368-fbf2f8e3d1a5",
+		"name": "Predrag Curdic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24045756"
+	},
+	"item": [
+		{
+			"name": "/user/register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5c901d3405334085188e65d9db12633ca82f7ff61e299772e748678e1c2f858a",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Jerry\",\n  \"email\": \"jerry@jjkl.jk\",\n  \"password\": \"mn1234\",\n  \"password_confirmation\": \"mn1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Link}}/user/register",
+					"host": [
+						"{{Link}}"
+					],
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/login/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5c901d3405334085188e65d9db12633ca82f7ff61e299772e748678e1c2f858a",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"jerry@jjkl.jk\"\n    \"password\": \"mn1234\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Link}}",
+					"host": [
+						"{{Link}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Link",
+			"value": "https://api.qa.rs/swagger.json",
+			"type": "string"
+		}
+	]
+}
